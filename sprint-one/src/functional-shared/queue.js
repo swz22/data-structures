@@ -1,9 +1,9 @@
 var Queue = function() {
 
- var someInstance = {}
+ var someInstance = {};
 
  someInstance.storage = {};
- someInstance.count = 0
+ someInstance.count = 0;
 
  _.extend(someInstance, queueMethods)
  return someInstance;

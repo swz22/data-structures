@@ -1,7 +1,7 @@
 var Queue = function() {
   var someInstance = Object.create(queueMethods);
   someInstance.storage = {};
-  someInstance.count = 0
+  someInstance.count = 0;
   return someInstance;
 };
 

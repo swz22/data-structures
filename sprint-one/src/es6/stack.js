@@ -4,23 +4,22 @@ class Stack {
     this.count = 0;
   }
 
-
-push(value) {
+  push(value) {
   this.storage[this.count] = value;
   this.count++;
-};
+  };
 
-pop() {
+  pop() {
   this.count --;
-  if (this.count < 0) {
+    if (this.count < 0) {
     this.count = 0;
-  }
+    }
   return this.storage[this.count]
-};
+  };
 
-size() {
+  size() {
   return this.count;
-};
+  };
 
 };
-var stackmethods = new Stack()
+var stackmethods = new Stack();
