@@ -6,7 +6,6 @@ var Stack = function() {
   console.log(someInstance.size)
 
 _.extend(someInstance, stackMethods);
-
     // someInstance.push = stackMethods.push;
     // someInstance.pop = stackMethods.pop;
     // someInstance.size = stackMethods.ize;

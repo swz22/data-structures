@@ -11,13 +11,13 @@ var Queue = function() {
 
 var queueMethods = {};
 
-queueMethods.enqueue = function(value){
+queueMethods.enqueue = function(value) {
   this.storage[this.count] = value;
   this.count++;
 };
 
-queueMethods.dequeue = function(){
-  if (this.count >= 1){
+queueMethods.dequeue = function() {
+  if (this.count >= 1) {
     for (var key in this.storage){
       this.storage[key - 1] = this.storage[key];
     }
@@ -28,11 +28,11 @@ queueMethods.dequeue = function(){
       delete this.storage['0'];
       return this.storage['0'];
     }
- if (this.count < 0){
+ if (this.count < 0) {
   this.count = 0;
     };
 };
 
-queueMethods.size = function(){
+queueMethods.size = function() {
   return this.count;
 };
