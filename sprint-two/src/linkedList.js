@@ -45,8 +45,56 @@ var LinkedList = function() {
 //.removeHead() method, removes the first node from the list
 // returns its value
   list.contains = function(target) {
-    console.log(list.head.value)
+//var result = false
+//while list.head.next !== null
+    // check is list.head.value === target
+      //if yes , set result to true
+      //break
+    //else
+      //list.head = list.head.next
+
+//return result
+
+  var result = false
+
+  while (list.head.next !== null){
+    //console.log(list.head.value)
+    if (list.head.value === target){
+      return true;
+    } else {
+      list.head = list.head.next
+    }
+  }
+
+  if (list.head.next === null){
     return (list.head.value === target)
+  }
+
+  return result
+
+  };
+//     console.log(list.head.value)
+//     var setNode = function(){
+//       var current = list.head
+//       var next = current.next
+//     }
+// checker = list.head.value
+
+//     console.log(next.head.value)
+//     //list.head.next.head.value
+// if (list.head.next !== null){
+//   if (list.head.value === target){
+//     return true
+//   } else{
+//   list.head = list.head.next
+//   setNode(list.head)}
+//   return false
+
+
+
+    //checker is constatly updated in a recursive function
+    // return (checker === target)
+    // return (list.head.value === target || next.head.value === target)
     //var currentNode = Node(target)
 
   //   for (var key in list) {
@@ -57,7 +105,6 @@ var LinkedList = function() {
   //    }
   //  }
     // return (list.target  === target)
-  };
 
   return list;
 };
