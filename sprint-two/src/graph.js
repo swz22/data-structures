@@ -44,9 +44,15 @@ Graph.prototype.removeNode = function(node) {
     let el = this.nodes[i];
     console.log(node)
     if (el.value === node){
+      for (var j = 0; el.links.length; j++){
+        var linked = el.links[j]
+        //remove link from linked nodes
+      }
+
       el.links = [];
       //el.value = null;
     }
+
   }
 };
 
