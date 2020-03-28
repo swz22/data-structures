@@ -27,6 +27,7 @@ aaah
 nodes = []
 */
 
+
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
   for (var i = 0; this.nodes.length > i; i++) {
@@ -40,28 +41,86 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  for ( var i = 0; this.nodes.length > i; i++){
+  for ( var i = 0; this.nodes.length > i; i++) {
+    let elthis = this.nodes
     let el = this.nodes[i];
-    console.log(node)
+    console.log(elthis)
+    //console.log(el.links)
     if (el.value === node){
-      for (var j = 0; el.links.length; j++){
+      for (var j = 0; el.links.length; j++) {
         var linked = el.links[j]
         //remove link from linked nodes
       }
-
+      el.value = null
       el.links = [];
       //el.value = null;
     }
-
   }
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function(fromNode, toNode) {
+  //interate through the nodes
+    //check if current iteration contains fromNode value
+    //iterate through the links
+        // check if fromNode has links to toNode
+      //return true or false
+    //else
+   //check if current iteration contains toNode value
+
+    //
+   // console.log(fromNode)
+    //console.log(toNode)
+    //console.log(this.nodes)
+
+for ( var i = 0; this.nodes.length > i; i++) {
+  let el = this.nodes[i];
+  //console.log(el.value)
+    if (el.value === fromNode || el.value === toNode){
+//console.log(el.links)
+      return ( _.contains(el.links, fromNode) ||_.contains(el.links, toNode))
+    }
+
+}
+
+
+
+
+// returns true or false
 };
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
+
+//check if fromNode or toNode if they are present (use has edge?)
+//probably edge case
+
+
+//iterate through this.nodes checking if any value equals fromNode
+  //iff nodes value is equeal to from node,
+    //add toNode to link
+
+  //if nodes value is equal to toNode,
+    //add fromNode to link
+
+for (var i = 0; i < 10; i++){
+  let el = this.nodes[i]
+
+  var link = el.links
+  console.log(link)
+  var value = el.value
+    if (el.value === fromNode){
+      link.push(toNode)
+    } else {
+      link.push(fromNode)
+    }
+
+
+
+    // else if (el.value === toNode){
+    //     link.push(fromNode)
+    // }
+  }
 };
 
 // Remove an edge between any two specified (by value) nodes.
