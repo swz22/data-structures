@@ -19,7 +19,6 @@ var LinkedList = function() {
       //list.head.next = list.tail
 //console.log(Node(value))
     } else {
-
       //var temp = list.tail
       list.head.next  = list.tail
       list.tail.next = currentNode
@@ -30,17 +29,11 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    console.log(Node)
-    var tempHead = list.head
-    var temp = tempHead.value
-    //list.head = tempHead.value
-    list.head = list.head.next
-    //list.head = list.head
+    //console.log(Node)
+    //var tempHead = list.head
+    var temp = list.head.value
 
-    // console.log(counter)
-    // console.log(list.head.value)
-    // console.log(list.head.next)
-    //= list.head.next
+    list.head = list.head.next
 
     return temp
 
@@ -52,8 +45,18 @@ var LinkedList = function() {
 //.removeHead() method, removes the first node from the list
 // returns its value
   list.contains = function(target) {
-    var currentNode = Node(target)
-    return (currentNode.value  === target  )
+    console.log(list.head.value)
+    return (list.head.value === target)
+    //var currentNode = Node(target)
+
+  //   for (var key in list) {
+  //     if (list[key] === target) {
+  //       return true
+  //     } else {
+  //     return false;
+  //    }
+  //  }
+    // return (list.target  === target)
   };
 
   return list;
