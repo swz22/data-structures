@@ -3,9 +3,6 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
-
-
-
   list.addToTail = function(value) {
     //console.log(value)
     var currentNode = Node(value)
