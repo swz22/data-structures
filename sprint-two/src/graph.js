@@ -1,5 +1,4 @@
 
-
 // Instantiate a new graph
 var Graph = function() {
   this.nodes = [];
@@ -78,7 +77,7 @@ for ( var i = 0; this.nodes.length > i; i++) {
   //console.log(el.value)
     if (el.value === fromNode || el.value === toNode){
 //console.log(el.links)
-      return ( _.contains(el.links, fromNode) ||_.contains(el.links, toNode))
+      return ( _.contains(el.links, fromNode) || _.contains(el.links, toNode))
     }
 
 }
@@ -106,7 +105,7 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 for (var i = 0; i < 10; i++){
   let el = this.nodes[i]
 
-  var link = el.links
+  var link = el[links]
   console.log(link)
   var value = el.value
     if (el.value === fromNode){
